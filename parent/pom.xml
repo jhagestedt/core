@@ -24,6 +24,8 @@
     <liquibase.version>3.6.2</liquibase.version>
     <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
     <spring.cloud.version>Greenwich.M1</spring.cloud.version>
+    <spring.cloud.stream.version>Elmhurst.RELEASE</spring.cloud.stream.version>
+    <azure.eventhub.binder.version>1.0.0.M2</azure.eventhub.binder.version>
     <azure.servicebus.version>1.2.8</azure.servicebus.version>
     <!-- java -->
     <java.version>1.8</java.version>
@@ -60,6 +62,18 @@
         <version>${spring.cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-stream-dependencies</artifactId>
+        <version>${spring.cloud.stream.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>spring-cloud-azure-eventhub-stream-binder</artifactId>
+        <version>${azure.eventhub.binder.version}</version>
       </dependency>
       <dependency>
         <groupId>com.microsoft.azure</groupId>
